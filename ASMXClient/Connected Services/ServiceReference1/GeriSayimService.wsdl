@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://asmx.berkalicanyildiz.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://asmx.berkalicanyildiz.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://asmx.berkalicanyildiz.com/">
+      <s:element name="GetGeriSayimlarJSONSoapHeader">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetGeriSayimlarJSONSoapHeaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeriSayimlarJSONSoapHeaderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Auth" type="tns:Auth" />
+      <s:complexType name="Auth">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetGeriSayimlarJSONParameters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeriSayimlarJSONParametersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeriSayimlarJSONParametersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeriSayimlarJSONSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="logininfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeriSayimlarJSONSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeriSayimlarJSONSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginForSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginForSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginForSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeriSayimlarJSON">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetGeriSayimlarJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeriSayimlarJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeriSayimlarXML">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetGeriSayimlarXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeriSayimlarXMLResult" type="tns:ArrayOfGeriSayim" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGeriSayim">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GeriSayim" nillable="true" type="tns:GeriSayim" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GeriSayim">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="GeriSayimID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeriSayim_Adi" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tarih" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Resim_Url" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetGeriSayimlarJSONSoapHeaderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeriSayimlarJSONSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetGeriSayimlarJSONSoapHeaderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeriSayimlarJSONSoapHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGeriSayimlarJSONSoapHeaderAuth">
+    <wsdl:part name="Auth" element="tns:Auth" />
+  </wsdl:message>
+  <wsdl:message name="GetGeriSayimlarJSONParametersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeriSayimlarJSONParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetGeriSayimlarJSONParametersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeriSayimlarJSONParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGeriSayimlarJSONSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeriSayimlarJSONSession" />
+  </wsdl:message>
+  <wsdl:message name="GetGeriSayimlarJSONSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeriSayimlarJSONSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginForSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginForSession" />
+  </wsdl:message>
+  <wsdl:message name="LoginForSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginForSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGeriSayimlarJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeriSayimlarJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetGeriSayimlarJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeriSayimlarJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGeriSayimlarXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeriSayimlarXML" />
+  </wsdl:message>
+  <wsdl:message name="GetGeriSayimlarXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeriSayimlarXMLResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GeriSayimServiceSoap">
+    <wsdl:operation name="GetGeriSayimlarJSONSoapHeader">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Geri Sayimlar JSON With Soap Header Security</wsdl:documentation>
+      <wsdl:input message="tns:GetGeriSayimlarJSONSoapHeaderSoapIn" />
+      <wsdl:output message="tns:GetGeriSayimlarJSONSoapHeaderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeriSayimlarJSONParameters">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Geri Sayimlar JSON With Parameters Security</wsdl:documentation>
+      <wsdl:input message="tns:GetGeriSayimlarJSONParametersSoapIn" />
+      <wsdl:output message="tns:GetGeriSayimlarJSONParametersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeriSayimlarJSONSession">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Geri Sayimlar JSON With Session Security</wsdl:documentation>
+      <wsdl:input message="tns:GetGeriSayimlarJSONSessionSoapIn" />
+      <wsdl:output message="tns:GetGeriSayimlarJSONSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginForSession">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Session Değeri Alma</wsdl:documentation>
+      <wsdl:input message="tns:LoginForSessionSoapIn" />
+      <wsdl:output message="tns:LoginForSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeriSayimlarJSON">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Geri Sayimlar JSON Public</wsdl:documentation>
+      <wsdl:input message="tns:GetGeriSayimlarJSONSoapIn" />
+      <wsdl:output message="tns:GetGeriSayimlarJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeriSayimlarXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Geri Sayimlar XML Public</wsdl:documentation>
+      <wsdl:input message="tns:GetGeriSayimlarXMLSoapIn" />
+      <wsdl:output message="tns:GetGeriSayimlarXMLSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GeriSayimServiceSoap" type="tns:GeriSayimServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGeriSayimlarJSONSoapHeader">
+      <soap:operation soapAction="https://asmx.berkalicanyildiz.com/GetGeriSayimlarJSONSoapHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetGeriSayimlarJSONSoapHeaderAuth" part="Auth" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeriSayimlarJSONParameters">
+      <soap:operation soapAction="https://asmx.berkalicanyildiz.com/GetGeriSayimlarJSONParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeriSayimlarJSONSession">
+      <soap:operation soapAction="https://asmx.berkalicanyildiz.com/GetGeriSayimlarJSONSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginForSession">
+      <soap:operation soapAction="https://asmx.berkalicanyildiz.com/LoginForSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeriSayimlarJSON">
+      <soap:operation soapAction="https://asmx.berkalicanyildiz.com/GetGeriSayimlarJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeriSayimlarXML">
+      <soap:operation soapAction="https://asmx.berkalicanyildiz.com/GetGeriSayimlarXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GeriSayimServiceSoap12" type="tns:GeriSayimServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGeriSayimlarJSONSoapHeader">
+      <soap12:operation soapAction="https://asmx.berkalicanyildiz.com/GetGeriSayimlarJSONSoapHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetGeriSayimlarJSONSoapHeaderAuth" part="Auth" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeriSayimlarJSONParameters">
+      <soap12:operation soapAction="https://asmx.berkalicanyildiz.com/GetGeriSayimlarJSONParameters" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeriSayimlarJSONSession">
+      <soap12:operation soapAction="https://asmx.berkalicanyildiz.com/GetGeriSayimlarJSONSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginForSession">
+      <soap12:operation soapAction="https://asmx.berkalicanyildiz.com/LoginForSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeriSayimlarJSON">
+      <soap12:operation soapAction="https://asmx.berkalicanyildiz.com/GetGeriSayimlarJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeriSayimlarXML">
+      <soap12:operation soapAction="https://asmx.berkalicanyildiz.com/GetGeriSayimlarXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GeriSayimService">
+    <wsdl:port name="GeriSayimServiceSoap" binding="tns:GeriSayimServiceSoap">
+      <soap:address location="http://localhost:51203/GeriSayimService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GeriSayimServiceSoap12" binding="tns:GeriSayimServiceSoap12">
+      <soap12:address location="http://localhost:51203/GeriSayimService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
