@@ -15,3 +15,8 @@ Database tarafı Entity Framework Code First ile yapılmıştır. Client tarafı
 4.Özel - Parametre ile güvenlik
 
 5.Özel - Session ile güvenlik
+
+
+Linkler:
+Mobil uygulamam:
+https://play.google.com/store/apps/details?id=com.berk.geri_sayim&gl=TR
